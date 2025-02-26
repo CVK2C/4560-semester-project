@@ -19,6 +19,8 @@ The column *isBuyerMaker* will be converted to an integer value, where True = 1,
 
 ## Example Table
 
+Note: In the actual CSV files, these columns will be unlabeled.
+
 | tradeId   | price          | qty        | quoteQty      | time          | isBuyerMaker | isBestMatch |
 | :-------: | :------------: | :--------: | :-----------: | :-----------: | :----------: | :---------: |
 | 500151364 | 19166.90000000 | 0.00476300 | 91.29194470   | 1607385600160 | False        | True        |
