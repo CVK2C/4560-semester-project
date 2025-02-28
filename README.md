@@ -1,76 +1,50 @@
-# Price Prediction Application (working title)
+# Welcome to your Expo app 👋
 
-![candlestick chart image](https://wallpapercave.com/wp/wp8544224.jpg)
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Introduction
+## Get started
 
-Today’s financial markets are complex, fast-paced, dominated by algorithms, and 
-produce more data per day than a human could parse in their lifetime. To solve this 
-problem, we have developed an application that is capable of not only parsing this immense 
-amount of data, but can also predict future price movements of financial markets.
+1. Install dependencies
 
-## Design Overview / Tech Stack
+   ```bash
+   npm install
+   ```
 
-The application is built in a modular fashion, and features a tool for data importation, a database, 
-machine learning models, and a responsive UI for normal users and administrators.
+2. Start the app
 
-Both the import tool and machine learning models are built using Python, the database is implemented 
-via MySQL, and the UI is written using React Native.
+   ```bash
+    npx expo start
+   ```
 
-## Dataset
+In the output, you'll find options to open the app in a
 
-The chosen dataset consists historical price tick data from of a selection of currency pairs, sourced 
-from [Binance](https://data.binance.vision). Check the README in **example-data** for more information.
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-## Current Progress
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-### Import Tool: In progress
+## Get a fresh project
 
-The import tool is in an alpha state, and not yet feature complete. 
-- Can read CSV and Parquet files
-- Can modify column names
-- Can connect to a MySQL database
-- Can write modified data to Parquet files (exists only for debugging reasons)
+When you're ready, run:
 
-Remaining:
-- Add logic to read database schema and determine contraints
-- Dynamically adjust incoming data depending on constraints
-- Add logic to modify/remove column data
+```bash
+npm run reset-project
+```
 
-### Machine Learning Models: Not started
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-Remaining:
-- Implement LSTM and Transformer models
+## Learn more
 
-### Database: In progress
+To learn more about developing your project with Expo, look at the following resources:
 
-Database is in an alpha state, and not yet feature complete.
-- Initial Schema has been created
-- Database has successfully loaded with test data
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-Remaining:
-- Finalize schema
-- Hash passwords of newly created users before storage
-- Perform further tests with more data (dependent on progress of other modules)
+## Join the community
 
-### UI: In progress
+Join our community of developers creating universal apps.
 
-UI is in an alpha state, and not yet feature complete.
-- Initial login page design completed
-
-Remaining:
-- Finalize login page design
-- Connect to MySQL database
-- Hash user passwords before sending to database for authentication
-- Implement user and admin views
-- Deploy to web browsers via React Native for Web
-
-*The list of remaining tasks is not final, and may be adjusted over time.*
-
-### Overall application: In progress
-
-Upon completion of individual modules, they will be assembled and under final testing/adjustment.
-
-### Installation Instructions
-
-Coming soon...
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
