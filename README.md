@@ -31,6 +31,7 @@ The import tool is in an alpha state, and not yet feature complete.
 - Can modify column names
 - Can connect to a MySQL database
 - Can write modified data to Parquet files (exists only for debugging reasons)
+
 Remaining:
 - Add logic to read database schema and determine contraints
 - Dynamically adjust incoming data depending on constraints
@@ -46,6 +47,7 @@ Remaining:
 Database is in an alpha state, and not yet feature complete.
 - Initial Schema has been created
 - Database has successfully loaded with test data
+
 Remaining:
 - Finalize schema
 - Hash passwords of newly created users before storage
