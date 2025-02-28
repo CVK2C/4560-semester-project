@@ -1,0 +1,39 @@
+CREATE TABLE TICKDATA
+(
+	Trade_id	INT(12) NOT NULL,
+    Trade_time	VARCHAR(14) NOT NULL,
+    Price		FLOAT NOT NULL,
+    Volume		FLOAT NOT NULL,
+    Side		TINYINT(1) NOT NULL, -- WILL HOLD EITHER 0 OR 1 TO DETERMINE SIDE OF DATA
+    PRIMARY KEY (Trade_id)
+);
+
+CREATE TABLE CANDLESTICK
+(
+	Candle_id	INT(8) NOT NULL,
+    Open_time	VARCHAR(14) NOT NULL,
+    Close_time	VARCHAR(14) NOT NULL,
+    Open_price	FLOAT NOT NULL,
+    High		FLOAT NOT NULL,
+    Low			FLOAT NOT NULL,
+    Close_price	FLOAT NOT NULL,
+    Volume		FLOAT NOT NULL
+);
+
+CREATE TABLE MODELINSTANCES
+(
+	Model_id		INT(8) NOT NULL,
+    Model_type		VARCHAR(9) NOT NULL,
+    Date_trained	VARCHAR(14) NOT NULL
+);
+
+CREATE TABLE USERINFO
+(
+	User_id		INT(8) NOT NULL,
+    Fname		VARCHAR(15) NOT NULL,
+    Lname		VARCHAR(15) NOT NULL,
+    Username	VARCHAR(20) UNIQUE,
+    Pword		VARCHAR(15), 			-- WILL BE CHANGED FOR THE SAKE OF DATA SECURITY
+    Admsts		VARCHAR(5),
+    PRIMARY KEY (User_id)
+);
