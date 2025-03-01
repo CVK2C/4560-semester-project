@@ -74,5 +74,5 @@ Remaining:
 
 ### Overall application: In progress
 
-Upon completion of individual modules, they will be assembled and under final testing/adjustment.
+Upon completion of individual modules, they will be assembled and undergo final testing/adjustment.
 
