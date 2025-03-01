@@ -27,13 +27,17 @@ from [Binance](https://data.binance.vision). Check the README in **example-data*
 ### Import Tool: In progress
 
 The import tool is in an alpha state, and not yet feature complete. 
-- Can read CSV and Parquet files
+- Can read CSV files from .zip archives
 - Can modify column names
-- Can connect to a MySQL database
+- Can connect to a MySQL server
+- Can create new databases and tables
+- Can import modified data from CSV files to a database
 - Can write modified data to Parquet files (exists only for debugging reasons)
 
 Remaining:
-- Add logic to read database schema and determine contraints
+- Add capability to import data from Parquet files
+- Add capability to import data from uncompressed CSV files
+- Add logic to read database schema and determine constraints
 - Dynamically adjust incoming data depending on constraints
 - Add logic to modify/remove column data
 
