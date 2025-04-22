@@ -12,6 +12,7 @@ from pyarrow import csv as pv
 from pathlib import Path
 import mysql.connector
 import argparse
+import numpy as np
 
 def list_files_in_directory(directory):
 
@@ -170,8 +171,9 @@ def import_csv(zip_files, db_connector, db_cursor):
 			timeframes = ["1min", "2min", "3min", "5min", "15min", "30min", "h", "4h", "D", "7D"]
 			for tf in timeframes:
 				try:
+					ohlc_df_list[tf] = ohlc_df_list[tf].replace(np.nan, None)
 					ohlc_val = list(ohlc_df_list[tf].itertuples(index=False, name=None))
-					ohlc_query = f"CREATE TABLE IF NOT EXISTS {test_table}_{tf} (trade_id INT NOT NULL AUTO_INCREMENT, open FLOAT, high FLOAT, low FLOAT, close FLOAT, volume FLOAT, start_time BIGINT(255), end_time BIGINT(255), PRIMARY KEY (trade_id))"
+					ohlc_query = f"CREATE TABLE IF NOT EXISTS {test_table}_{tf} (candle_id INT NOT NULL AUTO_INCREMENT, open FLOAT, high FLOAT, low FLOAT, close FLOAT, volume FLOAT, start_time BIGINT(255), end_time BIGINT(255), PRIMARY KEY (candle_id))"
 					db_cursor.execute(ohlc_query)
 					db_connector.commit()
 					
@@ -209,7 +211,7 @@ if __name__ == "__main__":
 	test_table = f"{dir_name}_TICK_DATA"
 
 	# Connect to MySQL server
-	db_connector = mysql.connector.connect(host="localhost", user="root", password="")
+	db_connector = mysql.connector.connect(host="localhost", user="", password="")
 	db_cursor = db_connector.cursor()
 
 	# DEBUG: Clear the database if it exists
@@ -231,7 +233,7 @@ if __name__ == "__main__":
 			print(f"An error occurred when preparing the database: {e}")
 			sys.exit()
 
-	# Search for Parquet and compressed CSV files
+	# Search for compressed CSV files
 	zip_files = list_files_in_directory(directory_to_search)
 
 	# Sort list of compressed csv files
