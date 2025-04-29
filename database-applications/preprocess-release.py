@@ -1,4 +1,4 @@
-# Code development was assisted by an LLM (Qwen2.5-coder:32b). Check q32b-log for prompts and responses.
+# Code development was assisted by an LLM (Qwen2.5-coder:32b). Check ai_disclaimer.pdf for prompts and responses.
 # NOTE: MySQL database credentials have been removed for privacy/security reasons. Fill in these values before running this script.
 
 import argparse
