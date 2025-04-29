@@ -1,4 +1,4 @@
-# Code development was assisted by an LLM (Qwen2.5-coder:32b). Check qwlg_importer.txt for prompts and responses.
+# Code development was assisted by an LLM (Qwen2.5-coder:32b). Check ai_disclaimer.pdf for prompts and responses.
 # NOTE: MySQL database credentials have been removed for privacy/security reasons. 
 # NOTE: Fill in these values before running this script.
 
