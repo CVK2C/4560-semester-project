@@ -1,4 +1,4 @@
-# Price Prediction Application (working title)
+# Price Forecaster
 
 ![candlestick chart image](https://wallpapercave.com/wp/wp8544224.jpg)
 
