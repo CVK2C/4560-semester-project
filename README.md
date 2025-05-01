@@ -83,7 +83,10 @@ The database applications (data import tool, data preprocessing script and machi
 ## Database Applications
 ### Data Importer Instructions
 
-1. Set up Python virtual environment
+1. Set up Python virtual environment `python3 -m venv [venv]` and `source [venv]/bin/activate`
+  - Replace `[venv]` with the actual name of the virtual environment
+  - Use the `python` command on Windows OS instead of `python3`
+  - Activate the environment with `[venv]\Scripts\activate.bat` or `[venv]\Scripts\Activate.ps1`
 2. Install dependencies: `pip install pandas pyarrow numpy mysql-connector-python`
 3. Run script: `python3 data-importer-release --directory /path/to/files`
 
