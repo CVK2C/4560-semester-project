@@ -10,7 +10,7 @@
 2. Install dependencies: `pip install pymysql pandas scikit-learn`
 3. Run script: `python3 preprocess-release.py --table-prefix TABLE_PREFIX`
 
-## LSTM Model (coming soon)
+## LSTM Model
 
 1. Set up or reuse previous Python virtual environment
 2. Install dependencies: `pip install scikit-learn tensorflow[and-cuda] joblib`
