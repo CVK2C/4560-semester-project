@@ -33,47 +33,49 @@ The import tool is in an alpha state, and not yet feature complete.
 - Can create new databases and tables
 - Can import modified data from CSV files to a database
 - Can write modified data to Parquet files (exists only for debugging reasons)
+- Can remove/modify columns/column data depending on requirements
 
 Remaining:
 - Add capability to import data from Parquet files
 - Add capability to import data from uncompressed CSV files
 - Add logic to read database schema and determine constraints
 - Dynamically adjust incoming data depending on constraints
-- Add logic to modify/remove column data
 
-### Machine Learning Models: Not started
+### Machine Learning Models: In Progress
+
+The machine learning models are in an alpha state, and not yet feature complete
+- A basic LSTM model is implemented, and can successfully train and test on the dataset, and output predictions
 
 Remaining:
-- Implement LSTM and Transformer models
+- Refine LSTM model to improve prediction accuracy
+- Implement Transformer models
 
 ### Database: In progress
 
 Database is in an alpha state, and not yet feature complete.
-- Initial Schema has been created
-- Database has successfully loaded with test data
+- Schema has been finalized
+- Database has successfully tested with a portion of the total dataset
 
 Remaining:
-- Finalize schema
 - Hash passwords of newly created users before storage
-- Perform further tests with more data (dependent on progress of other modules)
+- Perform further tests with the complete dataset
 
 ### UI: In progress
 
 UI is in an alpha state, and not yet feature complete.
-- Initial login page design completed
+- Login page has been completed
+- Can connect to the database
+- Has been deployed to web browsers via React Native for Web
+- Can view candlestick charts generated from data in the database
 
 Remaining:
-- Finalize login page design
-- Connect to MySQL database
 - Hash user passwords before sending to database for authentication
 - Implement user and admin views
-- Deploy to web browsers via React Native for Web
 
-*The list of remaining tasks is not final, and may be adjusted over time.*
 
 ### Overall application: In progress
 
-Upon completion of individual modules, they will be assembled and under final testing/adjustment.
+The project currently consists of the framework of the application, with some parts nearing a feature complete state.
 
 ### Installation Instructions
 
