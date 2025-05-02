@@ -139,7 +139,7 @@ Make sure your device or emulator can reach your Flask server (they should be on
 2. Install dependencies: `pip install scikit-learn tensorflow[and-cuda] joblib`
 3. Run script: `python3 lstm-release.py --table-prefix TABLE_PREFIX`
 
-Note: A supported Nvidia GPU and the CUDA Toolkit are required to run this script. Check Nvidia's website for instructions on how to install set up the CUDA Toolkit for your specific OS and driver version.
+Note: A supported Nvidia GPU and the CUDA Toolkit are required to run this script. Check Nvidia's website at https://developer.nvidia.com/cuda-toolkit for instructions on how to install set up the CUDA Toolkit for your specific OS and driver version.
 
 ## Tips Before Running The Application
 1. Database credentials for your specific database need to be added to the Flask backend script as well as the data importer and preprocessing scripts.
