@@ -104,7 +104,7 @@ You will need to:
 1. Set up your own MySQL database
    - Visit the MySQL website at https://www.mysql.com to find instructions to install MySQL for your chosen operating system
    - With MySQL installed, login to it, either via a GUI application like MySQL Workbench, or the terminal
-   - Create a database called `PROJECT_4560`
+   - Create a database called `PROJECT_4560`: `CREATE DATABASE PROJECT_4560;`
 2. Set up Python virtual environment in the `apps` folder: `python3 -m venv [venv]` and `source [venv]/bin/activate`
   - Replace `[venv]` with the actual name of the virtual environment
   - Use the `python` command on Windows OS instead of `python3`
