@@ -19,9 +19,9 @@ def login():
         db = mysql.connector.connect(
             host="localhost",
             port=3306,
-            user="root",
-            password="1234",  # your MySQL password 
-            database="app4050"
+            user="",
+            password="",  # your MySQL password 
+            database="PROJECT_4560"
         )
         cursor = db.cursor(dictionary=True)
 
@@ -67,9 +67,9 @@ def create_account():
         db = mysql.connector.connect(
             host="localhost",
             port=3306,
-            user="root",
-            password="1234",  #my MySQL password??
-            database="app4050"
+            user="",
+            password="",  #my MySQL password??
+            database="PROJECT_4560"
         )
         cursor= db.cursor()
         count_query="SELECT COUNT(*) AS user_count FROM USERINFO"
@@ -102,8 +102,8 @@ def get_dropdown_options():
         db = mysql.connector.connect(
             host="localhost",
             port=3306,
-            user="root",
-            password="1234",
+            user="",
+            password="",
             database="PROJECT_4560"
         )
         cursor = db.cursor(dictionary=True)
@@ -141,8 +141,8 @@ def displayHomeScreen():
         db = mysql.connector.connect(
             host="localhost",
             port=3306,
-            user="root",
-            password="1234",
+            user="",
+            password="",
             database="PROJECT_4560"
         )
         cursor = db.cursor(dictionary=True)
