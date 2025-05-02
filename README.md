@@ -2,6 +2,8 @@
 
 ![candlestick chart image](https://wallpapercave.com/wp/wp8544224.jpg)
 
+https://github.com/CVK2C/4560-semester-project
+
 ## Introduction
 
 Today’s financial markets are complex, fast-paced, dominated by algorithms, and 
@@ -80,6 +82,35 @@ The database applications (data import tool, data preprocessing script and machi
 
 # Installation Instructions
 
+## Frontend
+1. Install Node.js
+   - Download and install Node.js from https://nodejs.org
+2. Install Expo CLI
+   - Run the following command to install Expo CLI globally: `npm install -g expo-cli`
+3. Create the project folder
+  - Run `npx expo-cli init 4560-frontend`
+4. Copy the `apps` folder to the `4560-frontend` folder
+5. Navigate to the project directory
+  - Run `cd 4560-frontend`
+6. Start the project
+  - Run `npx expo start`
+
+Once everything is installed, you can run the app on your computer.
+To run the app on a mobile device, install the Expo Go app from the App Store or Google Play. Then scan the QR code displayed in the terminal to open the app on your phone.
+
+## Backend (Database and Flask Server)
+This project uses Flask as the backend API to connect the React Native frontend with the database. The Flask application is currently hardcoded to connect to a local database.
+You will need to:
+1. Set up your own MySQL database
+   - Visit the MySQL website at https://www.mysql.com to find instructions to install MySQL for your chosen operating system
+   - With MySQL installed, login to it, either via a GUI application like MySQL Workbench, or the terminal
+   - Create a database called `PROJECT_4560`
+2. Update the Flask configuration to connect to your database instance, and Update API Endpoints in the React Native Frontend
+   - Since the Flask server runs locally, you will also need to update the frontend to point to the correct host and port.
+   - Edit the following files and replace the existing API URL with your own local IP address and port: `index.tsx` and `create-account.tsx` in the `apps` folder, and `explore.tsx` and `index.tsx` in the (tabs) folder
+
+Make sure your device or emulator can reach your Flask server (they should be on the same network, and Flask should not be bound to localhost if accessed from another device). IMPORTANT: When configuring the API endpoint in the React Native app, do not use localhost or 127.0.0.1 as the host. These refer to the device itself, not your development machine. If you're running the app on a physical mobile device, it won't be able to reach the Flask server this way.
+
 ## Database Applications
 ### Data Importer Instructions
 
@@ -103,3 +134,8 @@ The database applications (data import tool, data preprocessing script and machi
 3. Run script: `python3 lstm-release.py --table-prefix TABLE_PREFIX`
 
 Note: A supported Nvidia GPU and the CUDA Toolkit are required to run this script. Check Nvidia's website for instructions on how to install set up the CUDA Toolkit for your specific OS and driver version.
+
+## Tips Before Running The Application
+1. Database credentials for your specific database need to be added to the Flask backend script as well as the data importer and preprocessing scripts.
+2. Obtain the same or a similar dataset from Binance
+3. Run the data importer script before interacting with the frontend
