@@ -105,9 +105,15 @@ You will need to:
    - Visit the MySQL website at https://www.mysql.com to find instructions to install MySQL for your chosen operating system
    - With MySQL installed, login to it, either via a GUI application like MySQL Workbench, or the terminal
    - Create a database called `PROJECT_4560`
-2. Update the Flask configuration to connect to your database instance, and Update API Endpoints in the React Native Frontend
+2. Set up Python virtual environment in the `apps` folder: `python3 -m venv [venv]` and `source [venv]/bin/activate`
+  - Replace `[venv]` with the actual name of the virtual environment
+  - Use the `python` command on Windows OS instead of `python3`
+  - Activate the environment with `[venv]\Scripts\activate.bat` or `[venv]\Scripts\Activate.ps1`
+3. Install dependencies: `pip install Flask mysql-connector-python`
+4. Update the Flask configuration to connect to your database instance, and Update API Endpoints in the React Native Frontend
    - Since the Flask server runs locally, you will also need to update the frontend to point to the correct host and port.
    - Edit the following files and replace the existing API URL with your own local IP address and port: `index.tsx` and `create-account.tsx` in the `apps` folder, and `explore.tsx` and `index.tsx` in the (tabs) folder
+5. Start the Flask server: Run `python app.py` or `python3 app.py` in the `apps` folder
 
 Make sure your device or emulator can reach your Flask server (they should be on the same network, and Flask should not be bound to localhost if accessed from another device). IMPORTANT: When configuring the API endpoint in the React Native app, do not use localhost or 127.0.0.1 as the host. These refer to the device itself, not your development machine. If you're running the app on a physical mobile device, it won't be able to reach the Flask server this way.
 
