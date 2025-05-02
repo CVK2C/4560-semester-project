@@ -144,4 +144,9 @@ Note: A supported Nvidia GPU and the CUDA Toolkit are required to run this scrip
 ## Tips Before Running The Application
 1. Database credentials for your specific database need to be added to the Flask backend script as well as the data importer and preprocessing scripts.
 2. Obtain the same or a similar dataset from Binance
+   - https://data.binance.vision/?prefix=data/spot/daily/trades/ETHUSDC
+   - https://data.binance.vision/?prefix=data/spot/daily/trades/ETHUSDT
+   - https://data.binance.vision/?prefix=data/spot/daily/trades/ETHBTC
+   - https://data.binance.vision/?prefix=data/spot/daily/trades/BTCUSDT
+   - https://data.binance.vision/?prefix=data/spot/daily/trades/BTCUSDC
 3. Run the data importer script before interacting with the frontend
